@@ -4,13 +4,36 @@ class ApiController {
 
     def index = { }
     
-    def summary = {}
+    def summary = {
+        
+    }
     
-    def heartbeats = {}
+    def heartbeats = {
+        
+    }
     
-    def pulse = {}
+    def pulse = {
+        
+    }
     
-    def pulseStart = {}
+    def pulseStart = {
+        
+    }
     
-    def pulseEnd = {}
+    def pulseEnd = {
+        
+    }
+    
+    def track = {
+        
+    }
+    
+    def trackStart = {
+        
+    }
+    
+    def trackEnd = {
+        
+    }
+    
 }
