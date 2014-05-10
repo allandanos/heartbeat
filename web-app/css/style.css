@@ -12,6 +12,9 @@
 	position: relative;
 }
 
+.navbar-default .navbar-brand {
+    color: #FF0000;
+}
 
 .navbar-static-side {
 	margin-top: 44px;
