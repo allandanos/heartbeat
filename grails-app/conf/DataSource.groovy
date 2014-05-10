@@ -41,8 +41,8 @@ environments {
                 testOnReturn=true
                 
                 validationQuery = "SELECT 1"
-*/
             }
+*/         
         }
     }
     test {
