@@ -1,5 +1,18 @@
 @CHARSET "UTF-8";
 
+@font-face {
+  font-family: 'Flatline';
+
+  src: url('../fonts/flatline.ttf');
+}
+
+.flatline {
+	font-family: 'Flatline';
+	font-size: 35px;
+	position: relative;
+}
+
+
 .navbar-static-side {
 	margin-top: 44px;
 }

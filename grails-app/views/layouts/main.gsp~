@@ -32,7 +32,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="index.html" class="navbar-brand">SB Admin v2.0</a>
+                <a href="index.html" class="navbar-brand">Heartbeat</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -57,7 +57,7 @@
                         </li>
                         <li>
 							<a href="#">
-					        		<label>Address Location :</label>
+					        		<label>Location :</label>
 					        		Makati City
 							</a>
                         </li>

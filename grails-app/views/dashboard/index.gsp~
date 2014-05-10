@@ -11,18 +11,6 @@
 				        </div>
 				        <!-- /.col-lg-12 -->
 				    </div>
-				    <div class="row">
-				        <div class="col-lg-12">
-				        	<div class="panel panel-default">
-					            <div class="panel-heading">
-					                Current Location
-					            </div>
-					            <div class="panel-body">
-					            </div>
-				        	</div>
-				        </div>
-				        <!-- /.col-lg-12 -->
-				    </div>
 				    <!-- /.row -->
 				    <div class="row">
 				        <div class="col-lg-6">
