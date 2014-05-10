@@ -80,6 +80,8 @@
             </div>
             <!-- /.navbar-static-side -->
         </nav>
+		<div id="page-wrapper">
         <g:layoutBody />
+		</div>
     </body>
 </html>
