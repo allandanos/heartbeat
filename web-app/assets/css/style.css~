@@ -388,6 +388,7 @@ SITE DESCRIPTION
     color: #FFFFFF;
     float: left;
     margin: 10px 0 10px 20px;
+    margin-left: 20px;
     padding: 0;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }

@@ -1,5 +1,6 @@
 <html>
     <head>
+        <meta name="layout" content="landing" />
         <title>Heartbeat</title>
     </head>
     <body>
@@ -10,10 +11,10 @@
 				<header id="header" class="pagewidth">
 						<hgroup>
 				<h1 id="site-logo"><a href="#" class="pulse" title="Heartbeat"><img src="assets/images/Heartbeat.gif" alt="Heartbeat" width="250" height="250"></a></h1>	
-				<h1 id="site-description">Heartbeat</h1>			
 			<!-- /gallery-controller -->			</hgroup>
 			
 			<div id="nav-bar" class="clearfix">
+				<h1 id="site-description">Heartbeat</h1>			
 				<nav>
 					<div id="menu-icon" class="mobile-button"><span>Menu</span></div>
 					<ul id="main-nav" class="main-nav pagewidth"><li id="menu-item-2279" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2279"><a href="#features">Features</a></li>

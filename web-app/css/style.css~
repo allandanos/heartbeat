@@ -13,7 +13,7 @@
 }
 
 .navbar-default .navbar-brand {
-    color: red;
+    color: #FF0000;
 }
 
 .navbar-static-side {
@@ -46,7 +46,7 @@
 
 #weather.flipped-icons .icons {
     font-size: 16px;
-    padding-top: 48px;
+    padding-top: 26px;
 }
 
 #weather.flipped-icons .icons img {

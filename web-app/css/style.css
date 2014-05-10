@@ -46,7 +46,7 @@
 
 #weather.flipped-icons .icons {
     font-size: 16px;
-    padding-top: 48px;
+    padding-top: 26px;
 }
 
 #weather.flipped-icons .icons img {
@@ -59,7 +59,7 @@
 }
 
 #weather.flipped-icons .text img {
-    margin-top: 22px;
+    margin-top: 0px;
 }
 
 #weather.flipped-icons .text p {
