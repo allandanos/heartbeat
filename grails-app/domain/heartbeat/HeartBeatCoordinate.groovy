@@ -2,6 +2,8 @@ package heartbeat
 
 class HeartBeatCoordinate {
     
+    Date dateCreated
+    
     float lat
     float lon
     
