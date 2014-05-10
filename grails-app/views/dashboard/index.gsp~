@@ -2,53 +2,6 @@
     <head>
         <title>Welcome to Grails</title>
         <meta name="layout" content="main" />
-        <style type="text/css" media="screen">
-
-        #nav {
-            margin-top:20px;
-            margin-left:30px;
-            width:228px;
-            float:left;
-
-        }
-        .homePagePanel * {
-            margin:0px;
-        }
-        .homePagePanel .panelBody ul {
-            list-style-type:none;
-            margin-bottom:10px;
-        }
-        .homePagePanel .panelBody h1 {
-            text-transform:uppercase;
-            font-size:1.1em;
-            margin-bottom:10px;
-        }
-        .homePagePanel .panelBody {
-            background: url(images/leftnav_midstretch.png) repeat-y top;
-            margin:0px;
-            padding:15px;
-        }
-        .homePagePanel .panelBtm {
-            background: url(images/leftnav_btm.png) no-repeat top;
-            height:20px;
-            margin:0px;
-        }
-
-        .homePagePanel .panelTop {
-            background: url(images/leftnav_top.png) no-repeat top;
-            height:11px;
-            margin:0px;
-        }
-        h2 {
-            margin-top:15px;
-            margin-bottom:15px;
-            font-size:1.2em;
-        }
-        #pageBody {
-            margin-left:280px;
-            margin-right:20px;
-        }
-        </style>
     </head>
     <body>
 		<div id="page-wrapper">
@@ -174,5 +127,27 @@
 				    </div>
 				    <!-- /.row -->
 				</div>
+
+			<!-- Core Scripts - Include with every page -->
+			<script src="${resource(dir:'js',file:'jquery-1.10.2.js')}"></script>
+			<script src="js/bootstrap.min.js"></script>
+			<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+
+			<!-- Page-Level Plugin Scripts - Morris -->
+			<script src="js/plugins/morris/raphael-2.1.0.min.js"></script>
+			<script src="js/plugins/morris/morris.js"></script>
+
+			<!-- SB Admin Scripts - Include with every page -->
+			<script src="js/sb-admin.js"></script>
+
+			<!-- Page-Level Demo Scripts - Morris - Use for reference -->
+			<script src="${resource(dir:'js',file:'custom.js')}"></script>
+		<script>
+			jQuery(document).ready(function() {
+				obj = {};
+				displayWeather(obj);
+	
+			});
+		</script>
     </body>
 </html>

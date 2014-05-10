@@ -1,7 +1,7 @@
 @CHARSET "UTF-8";
 
-#page-wrapper {
-	margin-left: 0;
+.navbar-static-side {
+	margin-top: 44px;
 }
 
 .flipped-icons {
@@ -19,6 +19,35 @@
 	background: blue;
 	color: white;
 	font-size: 20px;
+}
+
+#weather.flipped-icons .icons,
+#weather.flipped-icons .text {
+	border: none;
+	background: #fff;
+	color: blue;
+}
+
+#weather.flipped-icons .icons {
+    font-size: 16px;
+    padding-top: 48px;
+}
+
+#weather.flipped-icons .icons img {
+    margin-top: 35px;
+}
+
+#weather.flipped-icons .text {
+    font-size: 16px;
+    text-align: center;
+}
+
+#weather.flipped-icons .text img {
+    margin-top: 22px;
+}
+
+#weather.flipped-icons .text p {
+    text-align: left;
 }
 
 .flipped-icons .text {

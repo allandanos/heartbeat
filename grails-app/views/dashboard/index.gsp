@@ -18,18 +18,6 @@
 					                Current Location
 					            </div>
 					            <div class="panel-body">
-					            	<p>
-					            		<label>Address Location :</label>
-					            		Makati City
-					            	</p>
-					                <p>
-					                	<label>Latitude :</label>
-					                	14.55027
-					                </p>
-					                <p>
-					                	<label>Longtitue :</label>
-					                	121.03269
-					                </p>
 					            </div>
 				        	</div>
 				        </div>
@@ -127,5 +115,27 @@
 				    </div>
 				    <!-- /.row -->
 				</div>
+
+			<!-- Core Scripts - Include with every page -->
+			<script src="${resource(dir:'js',file:'jquery-1.10.2.js')}"></script>
+			<script src="js/bootstrap.min.js"></script>
+			<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+
+			<!-- Page-Level Plugin Scripts - Morris -->
+			<script src="js/plugins/morris/raphael-2.1.0.min.js"></script>
+			<script src="js/plugins/morris/morris.js"></script>
+
+			<!-- SB Admin Scripts - Include with every page -->
+			<script src="js/sb-admin.js"></script>
+
+			<!-- Page-Level Demo Scripts - Morris - Use for reference -->
+			<script src="${resource(dir:'js',file:'custom.js')}"></script>
+		<script>
+			jQuery(document).ready(function() {
+				obj = {};
+				displayWeather(obj);
+	
+			});
+		</script>
     </body>
 </html>
