@@ -34,22 +34,12 @@ class BootStrap {
         dataSource.properties.each { log.info it }
         log.info "---------------------------------"
         
-        initUserRoles()
-        
-//        synchronize()
-        
+        //initUserRoles()
         
     }
     
     def destroy = {
         
-    }
-    
-    def synchronize = {
-        syncService.syncDailyWeatherForecast()
-        syncService.syncFloodReport(2012)
-        syncService.syncFloodReport(2013)
-        syncService.syncFloodReport(2014)
     }
     
     def initUserRoles = {

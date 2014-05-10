@@ -12,10 +12,34 @@ class SyncService {
     
     final static String DAILY_WEATHER = "DailyWeatherForecast"
     
-    def syncFloodReport(year) {
-//        def json = grails.converters.JSON.parse( new URL( 'http://202.90.153.89/api/reports/flood/2014' ).text )
-//        println json;
-        //println JSON.stringify(json);
+    def syncFloodReport(years) {
+
+        
+        if (FloodReport.count() == 0) {
+
+            println "Synching Flood Reports.."
+            
+            for (year in years) {
+                def json = grails.converters.JSON.parse( new URL( "http://202.90.153.89/api/reports/flood/${year}" ).text )
+
+                for (report in json) {
+
+                    new FloodReport(
+                     floodHeight: report.flood_height,
+                     floodHeightRating: calcRating(report.flood_height),
+                     floodTime: sdft.parse(String.valueOf(report.flood_time)),
+                     details:   report.details,
+                     lat:        Double.valueOf(report.lat).floatValue(),
+                     lng:        Double.valueOf(report.lng).floatValue()
+                    ).save(flush: true, failOnError: true)    
+
+                }
+            }
+            
+            println "Sync complete."
+        }
+        
+        
     }
     
     def syncDailyWeatherForecast() {
@@ -83,7 +107,24 @@ class SyncService {
 //        println json;
     }
     
-    Date formatHourDate(date) {
+    private int calcRating(height){
+        
+        int rating = -1;
+      
+        if ("No Flood".equals(height)) { rating = 0; }
+        else if ("Ankle High".equals(height)) { rating = 1; }
+        else if ("Knee High".equals(height)) { rating = 2; }
+        else if ("Waist High".equals(height)) { rating = 3; }
+        else if ("Neck High".equals(height)) { rating = 4; }
+        else if ("Top of Head High".equals(height)) { rating = 5; }
+        else if ("1-Storey High".equals(height)) { rating = 6; }
+        else if ("1.5-Storeys High".equals(height)) { rating = 7; }
+        else if ("2-Storeys or Higher".equals(height)) { rating = 8; }
+      
+        return rating;
+
+    }
+    private Date formatHourDate(date) {
         String hourDateStr = sdfh.format(date)
         Date newDate = sdfh.parse(hourDateStr)
         

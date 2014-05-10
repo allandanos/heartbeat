@@ -13,6 +13,6 @@ class SyncFloodReportJob {
     def execute() {
        
         println "SyncFloodReportJob"
-        syncService.syncFloodReport()
+        syncService.syncFloodReport(2012..2014)
     }
 }

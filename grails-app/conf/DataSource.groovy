@@ -13,7 +13,7 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = "create-drop" // one of 'create', 'create-drop','update'
+            dbCreate = "create" // one of 'create', 'create-drop','update'
             url = "jdbc:hsqldb:mem:devDB"
 
 //			driverClassName = "com.mysql.jdbc.Driver";

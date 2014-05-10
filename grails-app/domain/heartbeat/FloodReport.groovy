@@ -12,6 +12,7 @@ class FloodReport {
     
     
     static constraints = {
-        
+        imageUrl nullable: true
+        details nullable: true
     }
 }
