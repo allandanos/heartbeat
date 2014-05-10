@@ -13,9 +13,9 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = "create-drop" // one of 'create', 'create-drop','update'
-            url = "jdbc:hsqldb:mem:devDB"
-/*
+            dbCreate = "create" // one of 'create', 'create-drop','update'
+            // url = "jdbc:hsqldb:mem:devDB"
+
 			driverClassName = "com.mysql.jdbc.Driver";
 			username = "heartbeat"
 			password = "heartbeat.123"
@@ -42,7 +42,8 @@ environments {
                 
                 validationQuery = "SELECT 1"
             }
-*/         
+            
+        
         }
     }
     test {

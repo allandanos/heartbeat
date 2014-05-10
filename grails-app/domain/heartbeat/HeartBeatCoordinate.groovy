@@ -5,7 +5,7 @@ class HeartBeatCoordinate {
     Date dateCreated
     
     float lat
-    float lon
+    float lng
     
     static belongsTo = [heartBeat: HeartBeat]
 

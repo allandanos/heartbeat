@@ -24,11 +24,13 @@
                         
                             <g:sortableColumn property="id" title="${message(code: 'heartBeatCoordinate.id.label', default: 'Id')}" />
                         
+                            <g:sortableColumn property="dateCreated" title="${message(code: 'heartBeatCoordinate.dateCreated.label', default: 'Date Created')}" />
+                        
                             <th><g:message code="heartBeatCoordinate.heartBeat.label" default="Heart Beat" /></th>
                         
                             <g:sortableColumn property="lat" title="${message(code: 'heartBeatCoordinate.lat.label', default: 'Lat')}" />
                         
-                            <g:sortableColumn property="lon" title="${message(code: 'heartBeatCoordinate.lon.label', default: 'Lon')}" />
+                            <g:sortableColumn property="lng" title="${message(code: 'heartBeatCoordinate.lng.label', default: 'Lng')}" />
                         
                         </tr>
                     </thead>
@@ -38,11 +40,13 @@
                         
                             <td><g:link action="show" id="${heartBeatCoordinateInstance.id}">${fieldValue(bean: heartBeatCoordinateInstance, field: "id")}</g:link></td>
                         
+                            <td><g:formatDate date="${heartBeatCoordinateInstance.dateCreated}" /></td>
+                        
                             <td>${fieldValue(bean: heartBeatCoordinateInstance, field: "heartBeat")}</td>
                         
                             <td>${fieldValue(bean: heartBeatCoordinateInstance, field: "lat")}</td>
                         
-                            <td>${fieldValue(bean: heartBeatCoordinateInstance, field: "lon")}</td>
+                            <td>${fieldValue(bean: heartBeatCoordinateInstance, field: "lng")}</td>
                         
                         </tr>
                     </g:each>

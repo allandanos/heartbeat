@@ -1,11 +1,11 @@
 
 
-<%@ page import="heartbeat.HeartBeatCoordinate" %>
+<%@ page import="heartbeat.DailyWeatherForecastData" %>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="layout" content="main" />
-        <g:set var="entityName" value="${message(code: 'heartBeatCoordinate.label', default: 'HeartBeatCoordinate')}" />
+        <g:set var="entityName" value="${message(code: 'dailyWeatherForecastData.label', default: 'DailyWeatherForecastData')}" />
         <title><g:message code="default.edit.label" args="[entityName]" /></title>
     </head>
     <body>
@@ -19,42 +19,49 @@
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
-            <g:hasErrors bean="${heartBeatCoordinateInstance}">
+            <g:hasErrors bean="${dailyWeatherForecastDataInstance}">
             <div class="errors">
-                <g:renderErrors bean="${heartBeatCoordinateInstance}" as="list" />
+                <g:renderErrors bean="${dailyWeatherForecastDataInstance}" as="list" />
             </div>
             </g:hasErrors>
             <g:form method="post" >
-                <g:hiddenField name="id" value="${heartBeatCoordinateInstance?.id}" />
-                <g:hiddenField name="version" value="${heartBeatCoordinateInstance?.version}" />
+                <g:hiddenField name="id" value="${dailyWeatherForecastDataInstance?.id}" />
+                <g:hiddenField name="version" value="${dailyWeatherForecastDataInstance?.version}" />
                 <div class="dialog">
                     <table>
                         <tbody>
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="heartBeat"><g:message code="heartBeatCoordinate.heartBeat.label" default="Heart Beat" /></label>
+                                  <label for="forecast"><g:message code="dailyWeatherForecastData.forecast.label" default="Forecast" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: heartBeatCoordinateInstance, field: 'heartBeat', 'errors')}">
-                                    <g:select name="heartBeat.id" from="${heartbeat.HeartBeat.list()}" optionKey="id" value="${heartBeatCoordinateInstance?.heartBeat?.id}"  />
-                                </td>
-                            </tr>
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                  <label for="lat"><g:message code="heartBeatCoordinate.lat.label" default="Lat" /></label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean: heartBeatCoordinateInstance, field: 'lat', 'errors')}">
-                                    <g:textField name="lat" value="${fieldValue(bean: heartBeatCoordinateInstance, field: 'lat')}" />
+                                <td valign="top" class="value ${hasErrors(bean: dailyWeatherForecastDataInstance, field: 'forecast', 'errors')}">
+                                    <g:select name="forecast.id" from="${heartbeat.DailyWeatherForecast.list()}" optionKey="id" value="${dailyWeatherForecastDataInstance?.forecast?.id}" noSelection="['null': '']" />
                                 </td>
                             </tr>
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="lng"><g:message code="heartBeatCoordinate.lng.label" default="Lng" /></label>
+                                  <label for="date"><g:message code="dailyWeatherForecastData.date.label" default="Date" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: heartBeatCoordinateInstance, field: 'lng', 'errors')}">
-                                    <g:textField name="lng" value="${fieldValue(bean: heartBeatCoordinateInstance, field: 'lng')}" />
+                                <td valign="top" class="value ${hasErrors(bean: dailyWeatherForecastDataInstance, field: 'date', 'errors')}">
+                                    <g:datePicker name="date" precision="day" value="${dailyWeatherForecastDataInstance?.date}"  />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="readings"><g:message code="dailyWeatherForecastData.readings.label" default="Readings" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: dailyWeatherForecastDataInstance, field: 'readings', 'errors')}">
+                                    
+<ul>
+<g:each in="${dailyWeatherForecastDataInstance?.readings?}" var="r">
+    <li><g:link controller="dailyWeatherForecastDataReading" action="show" id="${r.id}">${r?.encodeAsHTML()}</g:link></li>
+</g:each>
+</ul>
+<g:link controller="dailyWeatherForecastDataReading" action="create" params="['dailyWeatherForecastData.id': dailyWeatherForecastDataInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'dailyWeatherForecastDataReading.label', default: 'DailyWeatherForecastDataReading')])}</g:link>
+
                                 </td>
                             </tr>
                         

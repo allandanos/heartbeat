@@ -42,10 +42,10 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="lon"><g:message code="assetHeartBeatCoordinate.lon.label" default="Lon" /></label>
+                                  <label for="lng"><g:message code="assetHeartBeatCoordinate.lng.label" default="Lng" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: assetHeartBeatCoordinateInstance, field: 'lon', 'errors')}">
-                                    <g:textField name="lon" value="${fieldValue(bean: assetHeartBeatCoordinateInstance, field: 'lon')}" />
+                                <td valign="top" class="value ${hasErrors(bean: assetHeartBeatCoordinateInstance, field: 'lng', 'errors')}">
+                                    <g:textField name="lng" value="${fieldValue(bean: assetHeartBeatCoordinateInstance, field: 'lng')}" />
                                 </td>
                             </tr>
                         

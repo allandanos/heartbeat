@@ -30,6 +30,13 @@
                         </tr>
                     
                         <tr class="prop">
+                            <td valign="top" class="name"><g:message code="assetHeartBeatCoordinate.dateCreated.label" default="Date Created" /></td>
+                            
+                            <td valign="top" class="value"><g:formatDate date="${assetHeartBeatCoordinateInstance?.dateCreated}" /></td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
                             <td valign="top" class="name"><g:message code="assetHeartBeatCoordinate.lat.label" default="Lat" /></td>
                             
                             <td valign="top" class="value">${fieldValue(bean: assetHeartBeatCoordinateInstance, field: "lat")}</td>
@@ -37,9 +44,9 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="assetHeartBeatCoordinate.lon.label" default="Lon" /></td>
+                            <td valign="top" class="name"><g:message code="assetHeartBeatCoordinate.lng.label" default="Lng" /></td>
                             
-                            <td valign="top" class="value">${fieldValue(bean: assetHeartBeatCoordinateInstance, field: "lon")}</td>
+                            <td valign="top" class="value">${fieldValue(bean: assetHeartBeatCoordinateInstance, field: "lng")}</td>
                             
                         </tr>
                     

@@ -5,7 +5,7 @@ class AssetHeartBeatCoordinate {
     Date dateCreated
     
     float lat
-    float lon
+    float lng
 
     static constraints = {
     }

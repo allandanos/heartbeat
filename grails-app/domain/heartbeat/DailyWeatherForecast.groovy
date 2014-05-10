@@ -1,6 +1,6 @@
 package heartbeat
 
-class WeatherForecast {
+class DailyWeatherForecast {
     
     Date lastUpdate
     String source
@@ -8,7 +8,7 @@ class WeatherForecast {
     float lat
     float lng
     
-    static hasMany = [data: WeatherForecastData]
+    static hasMany = {data: DailyWeatherForecast}
 
     static constraints = {
     }

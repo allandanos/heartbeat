@@ -1,10 +1,10 @@
 
-<%@ page import="heartbeat.HeartBeatCoordinate" %>
+<%@ page import="heartbeat.DailyWeatherForecast" %>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="layout" content="main" />
-        <g:set var="entityName" value="${message(code: 'heartBeatCoordinate.label', default: 'HeartBeatCoordinate')}" />
+        <g:set var="entityName" value="${message(code: 'dailyWeatherForecast.label', default: 'DailyWeatherForecast')}" />
         <title><g:message code="default.show.label" args="[entityName]" /></title>
     </head>
     <body>
@@ -23,37 +23,44 @@
                     <tbody>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="heartBeatCoordinate.id.label" default="Id" /></td>
+                            <td valign="top" class="name"><g:message code="dailyWeatherForecast.id.label" default="Id" /></td>
                             
-                            <td valign="top" class="value">${fieldValue(bean: heartBeatCoordinateInstance, field: "id")}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="heartBeatCoordinate.dateCreated.label" default="Date Created" /></td>
-                            
-                            <td valign="top" class="value"><g:formatDate date="${heartBeatCoordinateInstance?.dateCreated}" /></td>
+                            <td valign="top" class="value">${fieldValue(bean: dailyWeatherForecastInstance, field: "id")}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="heartBeatCoordinate.heartBeat.label" default="Heart Beat" /></td>
+                            <td valign="top" class="name"><g:message code="dailyWeatherForecast.lastUpdate.label" default="Last Update" /></td>
                             
-                            <td valign="top" class="value"><g:link controller="heartBeat" action="show" id="${heartBeatCoordinateInstance?.heartBeat?.id}">${heartBeatCoordinateInstance?.heartBeat?.encodeAsHTML()}</g:link></td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="heartBeatCoordinate.lat.label" default="Lat" /></td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean: heartBeatCoordinateInstance, field: "lat")}</td>
+                            <td valign="top" class="value"><g:formatDate date="${dailyWeatherForecastInstance?.lastUpdate}" /></td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="heartBeatCoordinate.lng.label" default="Lng" /></td>
+                            <td valign="top" class="name"><g:message code="dailyWeatherForecast.lat.label" default="Lat" /></td>
                             
-                            <td valign="top" class="value">${fieldValue(bean: heartBeatCoordinateInstance, field: "lng")}</td>
+                            <td valign="top" class="value">${fieldValue(bean: dailyWeatherForecastInstance, field: "lat")}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name"><g:message code="dailyWeatherForecast.lng.label" default="Lng" /></td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean: dailyWeatherForecastInstance, field: "lng")}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name"><g:message code="dailyWeatherForecast.location.label" default="Location" /></td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean: dailyWeatherForecastInstance, field: "location")}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name"><g:message code="dailyWeatherForecast.source.label" default="Source" /></td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean: dailyWeatherForecastInstance, field: "source")}</td>
                             
                         </tr>
                     
@@ -62,7 +69,7 @@
             </div>
             <div class="buttons">
                 <g:form>
-                    <g:hiddenField name="id" value="${heartBeatCoordinateInstance?.id}" />
+                    <g:hiddenField name="id" value="${dailyWeatherForecastInstance?.id}" />
                     <span class="button"><g:actionSubmit class="edit" action="edit" value="${message(code: 'default.button.edit.label', default: 'Edit')}" /></span>
                     <span class="button"><g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" /></span>
                 </g:form>

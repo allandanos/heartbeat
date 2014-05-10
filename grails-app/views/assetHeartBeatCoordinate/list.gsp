@@ -24,9 +24,11 @@
                         
                             <g:sortableColumn property="id" title="${message(code: 'assetHeartBeatCoordinate.id.label', default: 'Id')}" />
                         
+                            <g:sortableColumn property="dateCreated" title="${message(code: 'assetHeartBeatCoordinate.dateCreated.label', default: 'Date Created')}" />
+                        
                             <g:sortableColumn property="lat" title="${message(code: 'assetHeartBeatCoordinate.lat.label', default: 'Lat')}" />
                         
-                            <g:sortableColumn property="lon" title="${message(code: 'assetHeartBeatCoordinate.lon.label', default: 'Lon')}" />
+                            <g:sortableColumn property="lng" title="${message(code: 'assetHeartBeatCoordinate.lng.label', default: 'Lng')}" />
                         
                         </tr>
                     </thead>
@@ -36,9 +38,11 @@
                         
                             <td><g:link action="show" id="${assetHeartBeatCoordinateInstance.id}">${fieldValue(bean: assetHeartBeatCoordinateInstance, field: "id")}</g:link></td>
                         
+                            <td><g:formatDate date="${assetHeartBeatCoordinateInstance.dateCreated}" /></td>
+                        
                             <td>${fieldValue(bean: assetHeartBeatCoordinateInstance, field: "lat")}</td>
                         
-                            <td>${fieldValue(bean: assetHeartBeatCoordinateInstance, field: "lon")}</td>
+                            <td>${fieldValue(bean: assetHeartBeatCoordinateInstance, field: "lng")}</td>
                         
                         </tr>
                     </g:each>
