@@ -125,8 +125,6 @@
 				displayFloodReport();
 
 				displayEarthquakeReport();
-
-				displayLandslideReport();
 	
 			});
 		</script>

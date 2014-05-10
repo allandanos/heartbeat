@@ -342,7 +342,7 @@ GRID
 HEADER
 *************************************************************************************/
 #headerwrap {
-	background: url(../images/hbwall.jpg) 50% 50%;
+	background: url(../images/bg-header.jpeg) 50% 50%;
 	width: 100%;
 }
 #header {
@@ -388,6 +388,7 @@ SITE DESCRIPTION
     color: #FFFFFF;
     float: left;
     margin: 10px 0 10px 20px;
+    margin-left: 20px;
     padding: 0;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }

@@ -1,12 +1,27 @@
 @CHARSET "UTF-8";
 
-#page-wrapper {
-	margin-left: 0;
+@font-face {
+  font-family: 'Flatline';
+
+  src: url('../fonts/flatline.ttf');
+}
+
+.flatline {
+	font-family: 'Flatline';
+	font-size: 35px;
+	position: relative;
+}
+
+.navbar-default .navbar-brand {
+    color: #FF0000;
+}
+
+.navbar-static-side {
+	margin-top: 44px;
 }
 
 .flipped-icons {
 	position: relative;
-	width: 440px;
 	height: 300px;
 }
 
@@ -16,14 +31,77 @@
 	top: 0;
 	left: 0;
 	height: 300px;
-	border: 1px solid blue;
-	background: blue;
-	color: white;
 	font-size: 20px;
 }
 
+#weather.flipped-icons .icons,
+#weather.flipped-icons .text,
+#flood.flipped-icons .icons,
+#flood.flipped-icons .text {
+	border: none;
+}
+
+#weather.flipped-icons .icons {
+    font-size: 16px;
+    padding-top: 26px;
+}
+
+#weather.flipped-icons .icons img {
+    margin-top: 35px;
+}
+
+#weather.flipped-icons .text {
+    font-size: 16px;
+    text-align: center;
+}
+
+#weather.flipped-icons .text p {
+    text-align: left;
+}
+
+#weather.flipped-icons .text img {
+    margin-top: 0px;
+}
+
+#flood.flipped-icons .icons,
+#flood.flipped-icons .text,
+#earthquake.flipped-icons .icons,
+#earthquake.flipped-icons .text,
+#landslide.flipped-icons .icons,
+#landslide.flipped-icons .text {
+    font-size: 16px;
+}
+
+#flood.flipped-icons .icons,
+#earthquake.flipped-icons .icon,
+#landslide.flipped-icons .icon {
+   text-align: center;
+	padding-top: 64px;
+}
+
+#flood.flipped-icons .icons h1,
+#earthquake.flipped-icons .icons h1,
+#landslide.flipped-icons .icons h1 {
+	   font-size: 55px;
+}
+
+#flood.flipped-icons .text,
+#earthquake.flipped-icons .text {
+	padding-top: 70px;
+}
+
+#earthquake.flipped-icons .text,
+#landslide.flipped-icons .text {
+	padding-top: 17px;
+	text-align: center;
+}
+
+#earthquake.flipped-icons .text p,
+#landslide.flipped-icons .text p {
+	text-align: left;
+}
+
 .flipped-icons .text {
-	background: red;
 	opacity: 0;
 }
 

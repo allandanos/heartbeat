@@ -43,7 +43,7 @@
         <g:layoutHead />
         <g:javascript library="application" />
     </head>
-    <body class="home page page-id-2204 page-parent page-template-default skin-default webkit not-ie query-page query-section sidebar-none list-post">
+    <body>
         <g:layoutBody />
     </body>
 </html>

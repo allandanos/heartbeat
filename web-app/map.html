@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Simple Polylines</title>
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+    <script>
+// This example creates a 2-pixel-wide red polyline showing
+// the path of William Kingsford Smith's first trans-Pacific flight between
+// Oakland, CA, and Brisbane, Australia.
+var map
+function initialize() {
+  var mapOptions = {
+    zoom: 3,
+    center: new google.maps.LatLng(14.558687, 121.019146),
+    mapTypeId: google.maps.MapTypeId.TERRAIN
+  };
+
+  map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+
+  var userCoor = [[37.772323, -122.214897, "april"],
+                [21.291982, -157.821856, "may"],
+                [-18.142599, 178.431, "june"],
+                [-27.46758, 153.027892, "july"]];
+
+  var infowindow = new google.maps.InfoWindow();
+
+  // var mypath = new Array();
+  //       $.getJSON(url, function (data) {
+
+            //  Parse the Linestring field into an array of LatLngs
+            // $.each(data.data, function(index, record) {
+            //     line = JSON.parse(record.Linestring);
+                //  Parse the array of LatLngs into Gmap points
+                // for(var i=0; i < line.length; i++){
+                //Tokenise the coordinates
+        //           var coords = (new String(line[i])).split(",");
+        //                     mypath.push(new google.maps.LatLng(coords[1], coords[0]));
+        //         }
+        //     }
+        // }
+
+
+  var marker, i;
+  
+  var myarr =[];
+
+  for (i = 0; i < userCoor.length; i++) {
+    marker = new google.maps.Marker({
+      position: new google.maps.LatLng(userCoor[i][0],userCoor[i][1]),
+      map: map
+    });
+
+      myarr.push(new google.maps.LatLng(userCoor[i][0],userCoor[i][1]));
+
+    google.maps.event.addListener(marker, 'click', (function(marker, i) {
+      return function() {
+        infowindow.setContent(userCoor[i][2]);
+        infowindow.open(map, marker);
+      }
+    })(marker, i));
+  }
+
+  var flightPath = new google.maps.Polyline({
+    path: myarr,
+    geodesic: true,
+    strokeColor: '#FF0000',
+    strokeOpacity: 1.0,
+    strokeWeight: 2
+  });
+
+  flightPath.setMap(map);
+
+
+  // Try HTML5 geolocation
+  if(navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = new google.maps.LatLng(position.coords.latitude,
+                                       position.coords.longitude);
+
+      var infowindow = new google.maps.InfoWindow({
+        map: map,
+        position: pos,
+        content: 'Location found using HTML5.'
+      });
+
+      map.setCenter(pos);
+    }, function() {
+      handleNoGeolocation(true);
+    });
+  } else {
+    // Browser doesn't support Geolocation
+    handleNoGeolocation(false);
+  }
+}
+
+function handleNoGeolocation(errorFlag) {
+  if (errorFlag) {
+    var content = 'Error: The Geolocation service failed.';
+  } else {
+    var content = 'Error: Your browser doesn\'t support geolocation.';
+  }
+
+  var options = {
+    map: map,
+    position: new google.maps.LatLng(14.558687, 121.019146),
+    content: content
+  };
+
+  var infowindow = new google.maps.InfoWindow(options);
+  map.setCenter(options.position);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+  </head>
+  <body>
+    <div id="map-canvas"></div>
+  </body>
+</html>
