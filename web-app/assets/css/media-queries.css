@@ -1,0 +1,389 @@
+@media screen and (max-width: 980px) {
+
+	/************************************************************************************
+	STRUCTURE
+	*************************************************************************************/
+	.pagewidth,
+	.sidebar-none.list-post .section-inner,
+	.single .section-inner {
+		max-width: 94%;
+	}
+	#header.pagewidth {
+		max-width: 100%;
+		width: 100%;
+	}
+	
+	/* IE navigation fix */
+	.pagewidth #nav-bar {
+		padding: 0 3% \9;
+		left: -3% \9;
+	}		
+		
+	/* content */
+	#content {
+		padding: 7% 0 5%;
+		width: 67.8%;
+	}
+	
+	/* sidebar */
+	#sidebar {
+		padding: 7% 0 5%;
+		width: 26.2%;
+	}
+	#sidebar .secondary {
+		width: 47.4%;
+	}
+	
+	/************************************************************************************
+	SECTION
+	*************************************************************************************/
+	/* section video */
+	.section-post.video {
+		min-height: 0;
+	}
+		
+}
+
+@media screen and (max-width: 760px) {
+
+	/************************************************************************************
+	STRUCTURE
+	*************************************************************************************/
+	#content {
+		width: 100%;
+		max-width: 100%;
+		float: none;
+		clear: both;
+	}
+	
+	/* sidebar */
+	#sidebar {
+		width: 100%;
+		max-width: 100%;
+		float: none;
+		clear: both;
+	}
+	
+	/************************************************************************************
+	HEADER
+	*************************************************************************************/
+	/* reset absolute elements to static */
+	#header .social-widget, 
+	#site-logo, 
+	#site-description  {
+		position: static !important;
+		float: none;
+		clear: both;
+	}
+			
+	/************************************************************************************
+	MOBILE NAV BUTTON
+	*************************************************************************************/
+	.mobile-button {
+		position: relative;
+		width: 60px;
+		height: 20px;
+		margin: auto;
+		display: block;
+		cursor: pointer;
+		padding: 20px 0 20px 32px;
+		white-space: nowrap;
+		text-align: left;
+	}
+	.mobile-button:after {
+		padding: 1px;
+		content: "";
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: -1px;
+		left: -1px;
+		z-index: -1;
+	}
+	.mobile-button span {
+		color: #fff;
+		text-transform: uppercase;
+	}
+
+	/************************************************************************************
+	MAIN NAV (MOBILE)
+	*************************************************************************************/
+	#main-nav-wrap {
+		position: absolute;
+		top: 5px;
+		right: 95px;
+		z-index: 1000;
+	}
+	
+	/* menu icon */
+	#menu-icon {
+		background: url(images/menu-icon.png) no-repeat left center;
+	}
+	
+	/* main nav */
+	#main-nav {
+		clear: both;
+		position: absolute;
+		width: 180px;
+		z-index: 1000;
+		padding: 10px 12px;
+		background: #fff !important;
+		display: none;
+		left: 50%;
+		margin-left: -100px;
+		border: solid 1px #ccc;
+	}
+	#main-nav li {
+		clear: both;
+		float: none;
+		padding: 5px 0 !important;
+		position: static;
+		display: block;
+		border-top: 1px solid #e5e5e5;
+	}
+	#main-nav li:first-child {
+		border: none;
+	}
+	#main-nav a, 
+	#main-nav ul a {
+		font: inherit !important;
+		font-size: .85em !important;
+		text-transform: inherit !important;
+		background: none !important;
+		width: auto !important;
+		display: block !important;
+		padding: 0 !important;
+		color: #666 !important;
+		border: none !important;
+	}
+	#main-nav a:hover, 
+	#main-nav ul a:hover {
+		background: none !important;
+		color: #000 !important;
+	}
+	
+	/* dropdown */
+	#main-nav ul {
+		position: static;
+		display: block;
+		margin: 0;
+		padding: 0;
+		background: none;
+		border: none;
+	}
+	#main-nav ul ul {
+		margin: 0;
+		text-align: center;
+	}
+	#main-nav ul ul:before {
+		display: none;
+	}
+	
+	/* home navigation */
+	#main-nav {
+	    top: auto;
+	    bottom: 60px;
+		max-height: 420px;
+		overflow: auto;
+	}
+	.fixed-nav-bar #main-nav {
+		position: absolute;
+	    top: 60px;
+	    bottom: auto;
+	}
+	
+	/************************************************************************************
+	SECTION
+	*************************************************************************************/
+	/* section */
+	.section-inner {
+		padding-top: 100px; /* padding space for fixed header */
+	}
+	
+	/* section message content */
+	.section-post.message {
+		font-size: 1em;
+	}
+	
+}
+
+@media screen and (max-width: 760px) and (max-height: 600px) {
+
+	/* make fixed menu scroll on mobile */
+	#main-nav {
+		max-height: 320px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	
+	/************************************************************************************
+	LOOPS WRAPPER
+	*************************************************************************************/
+	.loops-wrapper {
+		margin-left: 0 !important;
+	}
+
+	/************************************************************************************
+	POST
+	*************************************************************************************/
+	.list-post .post-content {
+		overflow: visible;
+	}
+
+	/* grid4 */
+	.grid4 .post,
+	.grid3 .post {
+		width: 100%;
+		margin-left: 0;
+		float: none;
+	}
+
+}
+
+@media screen and (max-width: 480px) {
+
+	/************************************************************************************
+	GRID
+	*************************************************************************************/
+	.col4-1,
+	.col4-2, .col2-1,
+	.col4-3,
+	.col3-1,
+	.col3-2	 {
+		margin-left: 0 !important;
+		width: 100% !important;
+		max-width: 100% !important;
+	}
+
+	/************************************************************************************
+	HEADER
+	*************************************************************************************/
+	#headerwrap {
+		z-index: 998;
+	}
+
+	/* social widget */
+	.social-widget {
+		position: static;
+		float: none;
+		padding: 0;
+	}
+
+	/************************************************************************************
+	POST
+	*************************************************************************************/
+	/* post */
+	.post {
+		width: auto !important;
+		max-width: 100% !important;
+		margin-left: 0 !important;
+		float: none !important;
+	}
+
+	#content .portfolio-expanded .post-image,
+	.single-portfolio .post-image,
+	body.list-post .post-image,
+	.shortcode.list-post .post-image {
+		 max-width: 100%;
+		 width: 100%;
+		 float: none;
+		 margin-right: 0%;
+	}
+
+	/* grid2-thumb */
+	body.grid2-thumb .post-image, 
+	.shortcode.grid2-thumb .post-image {
+		width: auto;
+		max-width: auto;
+		min-width: 0;
+	}
+	body.grid2-thumb .post-content, 
+	.shortcode.grid2-thumb .post-content {
+		overflow: visible;
+	}
+
+	/************************************************************************************
+	SECTION
+	*************************************************************************************/
+	/* section title */
+	.section-title,
+	.section-post.message .section-title {
+		font-size: 2.2em;
+	}
+	.section-subhead,
+	.section-post.message .section-subhead {
+		font-size: 1.2em;
+	}
+	
+	/************************************************************************************
+	POST NAV
+	*************************************************************************************/
+	.post-nav .prev, 
+	.post-nav .next {
+		display: block;
+		width: 100%;
+		clear: both;
+		margin-bottom: 10px;
+	}
+	
+	/************************************************************************************
+	COMMENTS
+	*************************************************************************************/
+	.commentlist {
+		padding-left: 0;
+	}
+	.commentlist .commententry {
+		clear: left;
+	}
+	.commentlist ul,
+	.commentlist ol {
+		margin: 0 0 0 5%;
+	}
+	.commentlist .avatar {
+		float: left;
+		width: 40px;
+		height: 40px;
+		margin: 0 10px 10px 0;
+	}
+
+	/************************************************************************************
+	GALLERY
+	*************************************************************************************/
+	#body .gallery-columns-1 img {
+		max-width: 50px;
+		padding: 3px;
+	}
+
+	/************************************************************************************
+	FOOTER
+	*************************************************************************************/
+	#footer-logo {
+		position: static;
+	}
+	.footer-nav {
+		padding: 0;
+	}
+	
+	/************************************************************************************
+	WOOCOMMERCE SUPPORT
+	*************************************************************************************/
+	.woocommerce #content div.product div.images,
+	.woocommerce #content div.product div.summary {
+		float: none !important;
+		width: 100% !important;
+	}
+
+}
+
+@media screen and (min-width: 761px) {
+
+	/* ensure #nav is visible on desktop version */
+	#main-nav {
+		display: block !important;
+	}
+	#menu-icon span {
+		display: none;
+	}
+
+}
