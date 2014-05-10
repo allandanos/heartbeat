@@ -1,5 +1,5 @@
 
-
+import heartbeat.HeartBeat
 
 
 /**
@@ -7,7 +7,7 @@
  */
 class User {
 	static transients = ['pass']
-	static hasMany = [authorities: Role]
+	static hasMany = [authorities: Role, heartBeats: HeartBeat]
 	static belongsTo = Role
 
 	/** Username */
