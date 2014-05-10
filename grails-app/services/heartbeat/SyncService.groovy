@@ -12,7 +12,7 @@ class SyncService {
     
     final static String DAILY_WEATHER = "DailyWeatherForecast"
     
-    def syncFloodReport() {
+    def syncFloodReport(year) {
 //        def json = grails.converters.JSON.parse( new URL( 'http://202.90.153.89/api/reports/flood/2014' ).text )
 //        println json;
         //println JSON.stringify(json);
@@ -22,7 +22,6 @@ class SyncService {
         
         def now = new Date()
         def history = SyncHistory.findByTypeAndDateCreated(DAILY_WEATHER, formatHourDate(now))
-        println history
         
         if (history != null) {
             

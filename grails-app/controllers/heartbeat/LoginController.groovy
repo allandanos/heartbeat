@@ -33,7 +33,7 @@ class LoginController {
 
 	def index = {
 		if (isLoggedIn()) {
-			redirect uri: '/'
+			redirect uri: '/dashboard'
 		}
 		else {
 			redirect action: auth, params: params
@@ -48,7 +48,7 @@ class LoginController {
 		nocache response
 
 		if (isLoggedIn()) {
-			redirect uri: '/'
+			redirect uri: '/dashboard'
 			return
 		}
 

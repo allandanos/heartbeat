@@ -7,4 +7,8 @@ security {
 	loginUserDomainClass = "heartbeat.User"
 	authorityDomainClass = "heartbeat.Role"
 	requestMapClass = "heartbeat.Requestmap"
+    
+    defaultTargetUrl = '/login'
+    
+    afterLogoutUrl = '/login'
 }
