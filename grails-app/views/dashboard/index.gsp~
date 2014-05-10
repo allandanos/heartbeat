@@ -18,18 +18,6 @@
 					                Current Location
 					            </div>
 					            <div class="panel-body">
-					            	<p>
-					            		<label>Address Location :</label>
-					            		Makati City
-					            	</p>
-					                <p>
-					                	<label>Latitude :</label>
-					                	14.55027
-					                </p>
-					                <p>
-					                	<label>Longtitue :</label>
-					                	121.03269
-					                </p>
 					            </div>
 				        	</div>
 				        </div>
