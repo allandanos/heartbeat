@@ -5,7 +5,7 @@ package heartbeat
  */
 class User {
 	static transients = ['pass']
-	static hasMany = [authorities: Role, heartBeats: HeartBeat]
+	static hasMany = [authorities: Role, heartBeats: HeartBeat, assetTypes: AssetType]
 	static belongsTo = Role
 
 	/** Username */
