@@ -47,7 +47,7 @@
 		</div>
 
 		<div class="paginateButtons">
-			<g:paginate total="${User.count()}" />
+			<g:paginate total="${heartbeat.User.count()}" />
 		</div>
 
 	</div>

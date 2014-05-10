@@ -1,6 +1,4 @@
-
-
-
+package heartbeat
 
 /**
  * Authority domain class.

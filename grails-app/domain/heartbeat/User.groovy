@@ -1,6 +1,4 @@
-
-import heartbeat.HeartBeat
-
+package heartbeat
 
 /**
  * User domain class.

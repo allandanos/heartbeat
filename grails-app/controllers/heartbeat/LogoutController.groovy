@@ -1,3 +1,5 @@
+package heartbeat
+
 /**
  * Logout Controller (Example).
  */

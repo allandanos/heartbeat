@@ -1,4 +1,4 @@
-
+package heartbeat
 
 
 import org.springframework.security.providers.UsernamePasswordAuthenticationToken as AuthToken

@@ -1,4 +1,4 @@
-
+package heartbeat
 
 /**
  * Request Map domain class.
