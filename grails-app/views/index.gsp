@@ -20,6 +20,7 @@
 					<ul id="main-nav" class="main-nav pagewidth"><li id="menu-item-2279" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2279"><a href="#features">Features</a></li>
 <li id="menu-item-2280" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2280"><a href="#download">Download</a></li>
 <li id="menu-item-2281" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2281"><a href="login">Login</a></li>
+<li id="menu-item-2282" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2282"><a href="register">Register</a></li>
 </ul>					<!-- /#main-nav --> 
 				</nav>
 			</div>

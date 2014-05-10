@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Dashboard</title>
-        <meta name="layout" content="main" />
+        <meta name="layout" content="dashboard" />
     </head>
     <body>
 				    <div class="row">

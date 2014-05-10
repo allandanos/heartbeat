@@ -25,15 +25,6 @@
             <img src="${resource(dir:'images',file:'spinner.gif')}" alt="${message(code:'spinner.alt',default:'Loading...')}" />
         </div>
 		<nav style="margin-bottom: 0" role="navigation" class="navbar navbar-default navbar-fixed-top">
-            <div class="navbar-header">
-                <button data-target=".sidebar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="index.html" class="navbar-brand flatline">Heartbeat</a>
-            </div>
             <!-- /.navbar-header -->
 
             <!-- /.navbar-top-links -->
@@ -42,6 +33,14 @@
                 <div class="sidebar-collapse">
                     <ul id="side-menu" class="nav">
                         <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" placeholder="Search..." class="form-control">
+                                <span class="input-group-btn">
+                                <button type="button" class="btn btn-default">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
                             <!-- /input-group -->
                         </li>
                         <li>
