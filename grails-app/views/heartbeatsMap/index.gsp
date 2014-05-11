@@ -62,8 +62,11 @@ function drawMap(data)
 
   var marker, i;
   
-  var myarr =[];
+  
 	jQuery.each(data, function(key, list) {
+      
+        var myarr =[];
+        
 		jQuery.each(list, function(key, item) {
 			marker = new google.maps.Marker({
 			  position: new google.maps.LatLng(item.lat, item.lng),
@@ -79,17 +82,21 @@ function drawMap(data)
 		    infowindow.open(map, marker);
 		  }
 		}));
+        
+        var flightPath = new google.maps.Polyline({
+          path: myarr,
+          geodesic: true,
+          strokeColor: getRandomColor(),
+          strokeOpacity: 1.0,
+          strokeWeight: 2
+        });
+        
+        flightPath.setMap(map);
 	});
 
-  var flightPath = new google.maps.Polyline({
-    path: myarr,
-    geodesic: true,
-    strokeColor: getRandomColor(),
-    strokeOpacity: 1.0,
-    strokeWeight: 2
-  });
 
-  flightPath.setMap(map);
+
+  
 }
 
 
