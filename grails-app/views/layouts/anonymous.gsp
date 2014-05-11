@@ -43,25 +43,7 @@
                 <div class="sidebar-collapse">
                     <ul id="side-menu" class="nav">
 	                        <li>
-                            <a href="/heartbeat/dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-                        </li>
-                        <li>
-							<a href="/heartbeat/heartbeatsMap"><i class="fa fa-bar-logout fa-fw"></i>Heartbeats</a>
-                        </li>
-                        <li>
-							<a href="/heartbeat/activeFaultLine"><i class="fa fa-bar-logout fa-fw"></i>Active Fault Line</a>
-                        </li>
-                        <li>
-							<a href="/heartbeat/remark"><i class="fa fa-bar-logout fa-fw"></i>View Remarks</a>
-                        </li>
-                        <li>
-							<a href="/heartbeat/assetType"><i class="fa fa-bar-logout fa-fw"></i>Manage Asset Types</a>
-                        </li>
-                        <li>
-							<a href="/heartbeat/asset"><i class="fa fa-bar-logout fa-fw"></i>Manage Assets</a>
-                        </li>
-                        <li>
-							<a href="/heartbeat/logout"><i class="fa fa-bar-logout fa-fw"></i>Logout</a>
+                            <a href="/heartbeat/register"><i class="fa fa-dashboard fa-fw"></i> Register</a>
                         </li>
                     </ul>
                     <!-- /#side-menu -->
