@@ -84,7 +84,7 @@ function drawMap(data)
   var flightPath = new google.maps.Polyline({
     path: myarr,
     geodesic: true,
-    strokeColor: '#FF0000',
+    strokeColor: getRandomColor(),
     strokeOpacity: 1.0,
     strokeWeight: 2
   });
@@ -111,6 +111,15 @@ function handleNoGeolocation(errorFlag) {
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
+
+function getRandomColor() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
 
     </script>
     </head>
