@@ -19,45 +19,14 @@ function initialize() {
   map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
 
-  var userCoor = [
-				[37.772323, -122.214897, "april"],
-                [21.291982, -157.821856, "may"],
-                [-18.142599, 178.431, "june"],
-                [-27.46758, 153.027892, "july"]
-];
-
-
 var user_id = 1;
 
-$.ajax({	
+jQuery.ajax({	
 	url: '/heartbeat/api/pulseStart',
 	data : {
 		'uid' : user_id
 	},
 	success : function(resp) {
-		var data = [
-			{
-			  "date": "May 10, 2014",     
-			  "lat": 37.772323,
-			  "lng": -122.214897
-			},
-			{
-			  "date": "May 10, 2014",     
-			  "lat": 21.291982,
-			  "lng": -157.821856
-			},
-			{
-			  "date": "May 10, 2014",     
-			  "lat": -18.142599,
-			  "lng": 178.431
-			},
-			{
-			  "date": "May 10, 2014",     
-			  "lat": -27.46758,
-			  "lng": 153.027892
-			}
-		  ];
-
 		drawMap(data) ;
 	}
 });
@@ -88,7 +57,6 @@ $.ajax({
 
 function drawMap(data) 
 {
-	
   var infowindow = new google.maps.InfoWindow();
 
   var marker, i;

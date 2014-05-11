@@ -19,56 +19,57 @@ class ApiController {
                 location: "Manila",
                 lat: 14.597,
                 lng: 120.985,
+                "icon": "http://nababaha.appspot.com/static/img/30.png",
                 data: [
                     [
                         "date": "May 11, 2014",			
                         "rainfall": "0",
                         "real_feel": "30",
-                        "temperature": "27",
+                        "temperature": "36",
                         "time": "03:00 PM-06:00PM",
                         "windspeed": "0",
                         "relative_hum": "78",
                         "wind_dir": "NE",
-                        "icon": "http://nababaha.appspot.com/static/img/34.png"
+                        "icon": "http://nababaha.appspot.com/static/img/30.png"
                     ],
                     [
                         "date": "May 12, 2014",			
                         "rainfall": "0",
-                        "real_feel": "30",
-                        "temperature": "27",
+                        "real_feel": "37",
+                        "temperature": "37",
                         "time": "03:00 PM-06:00PM",
                         "windspeed": "0",
                         "relative_hum": "78",
                         "wind_dir": "NE",
-                        "icon": "http://nababaha.appspot.com/static/img/33.png"
+                        "icon": "http://nababaha.appspot.com/static/img/32.png"
                     ],
                     [
                         "date": "May 13, 2014",			
                         "rainfall": "0",
                         "real_feel": "30",
-                        "temperature": "27",
+                        "temperature": "34",
                         "time": "03:00 PM-06:00PM",
                         "windspeed": "0",
                         "relative_hum": "78",
                         "wind_dir": "NE",
-                        "icon": "http://nababaha.appspot.com/static/img/34.png"
+                        "icon": "http://nababaha.appspot.com/static/img/30.png"
                     ],
                 ]
             ],
             flood: [
-                flood_height: "Waist High",
+                flood_height: "No Flood",
                 flood_rating: 3,
-                flood_time: "Jan 20, 2013 08:00 AM",
+                flood_time: "May 11, 2014 03:00 PM",
                 image_url: "",
-                details: "people were trapped and rendered isolated due to heavy rains (and increase in water levels)"
+                details: ""
             ],
             landslide: [
-                landslide_rating: 0,
-                details: "people were trapped under the bridge"
+                landslide_distance: 0,
+                details: "Away from landslide hazzard zone"
             ],
             earthquake: [
-                earthquake_rating: 0,
-                details: "people were trapped and the caves"
+                earthquake_distance: 30,
+                details: "Marikina Fault Line"
             ]
         ]
         

@@ -119,15 +119,24 @@
 			<script src="${resource(dir:'js',file:'custom.js')}"></script>
 		<script>
 			jQuery(document).ready(function() {
-				obj = {};
-				displayWeather(obj);
+				 var lat = '36.3589',lng='12.1426', user_id = 1; 
+				jQuery.ajax({
+					url: '${resource(dir:'api',file:'summary')}',
+					data: {
+						uid : user_id,
+						'lat' : lat,
+						'lng' : lng
+					},
+					success: function(resp) {
+						displayWeather(resp.weather);
 
-				displayFloodReport();
+						displayFloodReport(resp.flood);
 
-				displayEarthquakeReport();
+						displayEarthquakeReport(resp.landslide);
 
-				displayLandslideReport();
-	
+						displayLandslideReport(resp.earthquake);
+					}
+				});
 			});
 		</script>
     </body>

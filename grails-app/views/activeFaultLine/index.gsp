@@ -7,7 +7,7 @@
 	// This example creates a 2-pixel-wide red polyline showing
 	// the path of William Kingsford Smith's first trans-Pacific flight between
 	// Oakland, CA, and Brisbane, Australia.
-	var map
+	var map, user_id = 1;
 	function initialize() {
 	  var mapOptions = {
 		zoom: 3,

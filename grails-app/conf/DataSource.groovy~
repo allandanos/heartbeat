@@ -13,15 +13,9 @@ hibernate {
 environments {
     development {
         dataSource {
-<<<<<<< HEAD
             dbCreate = "update" // one of 'create', 'create-drop','update'
-//            url = "jdbc:hsqldb:mem:devDB"
-
-=======
-            dbCreate = "create-drop" // one of 'create', 'create-drop','update'
             url = "jdbc:hsqldb:mem:devDB"
 /*
->>>>>>> create a ajax call on heartbeatsMap page
 			driverClassName = "com.mysql.jdbc.Driver";
 			username = "heartbeat"
 			password = "heartbeat.123"
