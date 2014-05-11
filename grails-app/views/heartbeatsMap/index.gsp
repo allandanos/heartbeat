@@ -69,10 +69,10 @@ function drawMap(data)
 			  position: new google.maps.LatLng(item.lat, item.lng),
 			  map: map
 			});
-	});
+            
+            myarr.push(new google.maps.LatLng(item.lat, item.lng));
+        });
 		
-		myarr.push(new google.maps.LatLng(item.lat, item.lng));
-
 		google.maps.event.addListener(marker, 'click', (function(marker, i) {
 		  return function() {
 		    infowindow.setContent(item.date);
