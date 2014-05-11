@@ -42,7 +42,6 @@ environments {
                 
                 validationQuery = "SELECT 1"
             }
-*/            
         
         }
     }
