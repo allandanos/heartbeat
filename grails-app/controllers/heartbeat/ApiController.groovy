@@ -72,7 +72,7 @@ class ApiController {
             ]
         ]
         
-        render result as XML
+        render result as JSON
         
     }
     
