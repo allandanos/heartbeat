@@ -206,13 +206,19 @@ class ApiController {
         
     }
     
-    def remark = {
+    def scene = {
      
         try {
             
             def user = User.findById(params.uid)
             if (user) {
-
+                
+                new Remark (
+                    user: user,
+                    message: params.remarks,
+                    lat: params.lat ?: "",
+                    lng: params.lng ?: ""
+                ).save(flush: true)
                 
             }
            

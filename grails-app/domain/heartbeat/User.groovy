@@ -5,7 +5,7 @@ package heartbeat
  */
 class User {
 	static transients = ['pass']
-	static hasMany = [authorities: Role, heartBeats: HeartBeat, assetTypes: AssetType]
+	static hasMany = [authorities: Role, heartBeats: HeartBeat, assetTypes: AssetType, remarks: Remark]
 	static belongsTo = Role
 
 	/** Username */
@@ -32,4 +32,8 @@ class User {
 		passwd(blank: false)
 		enabled()
 	}
+    
+    String toString(){
+        return username
+    }
 }

@@ -11,4 +11,8 @@ class AssetType {
     static constraints = {
         
     }
+    
+    String toString() {
+        return name
+    }
 }

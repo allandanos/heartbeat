@@ -11,4 +11,8 @@ class HeartBeatCoordinate {
 
     static constraints = {
     }
+    
+    String toString(){
+        return "[$lat , $lng] - $dateCreated"
+    }
 }

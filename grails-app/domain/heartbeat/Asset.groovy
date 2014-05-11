@@ -10,4 +10,8 @@ class Asset {
     
     static constraints = {
     }
+    
+    String toString() {
+        return name
+    }
 }
