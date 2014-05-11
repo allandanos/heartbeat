@@ -81,15 +81,25 @@ class ApiController {
         try {
             
             def res = []
-            def db = new Sql(dataSource)
-            def row = db.rows("select id from heart_beat where end is null")
-
-            def session = row ? HeartBeat.findById(row[0].id) : null;
-
-            if (session) {
-                session.coordinates.each {
-                    println it
+            
+            def beats = HeartBeat.list()
+            
+            for (beat in beats) {
+                
+                def coords = []
+                
+                for (coord in beat.coordinates) {
+                    
+                    def info = [
+                        date: coord.dateCreated,
+                        lat: coord.lat,
+                        lng: coord.lng
+                    ]
+                    
+                    coords.add (info)
                 }
+                
+                res.add(coords)
             }
             
             render res as JSON
@@ -193,6 +203,27 @@ class ApiController {
             render res as JSON
         }
         
+        
+    }
+    
+    def remark = {
+     
+        try {
+            
+            def user = User.findById(params.uid)
+            if (user) {
+
+                
+            }
+           
+            def res = [result: "remarked"] 
+            render res as JSON
+            
+        } catch (Exception e) {
+            e.printStackTrace()
+            def res = [result: "error"] 
+            render res as JSON
+        }
         
     }
     

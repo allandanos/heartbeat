@@ -37,6 +37,8 @@ class SyncService {
             }
             
             println "Sync complete."
+        } else {
+            println "Already synched"
         }
         
         
@@ -47,11 +49,8 @@ class SyncService {
         def now = new Date()
         def history = SyncHistory.findByTypeAndDateCreated(DAILY_WEATHER, formatHourDate(now))
         
-        if (history != null) {
+        if (SyncHistory.count() == 0) {
             
-            println "Skipping - already syched"
-            
-        } else {
             println "Synching.."
             
             new SyncHistory (
