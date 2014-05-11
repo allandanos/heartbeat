@@ -2,7 +2,8 @@
     <head>
         <title>Heartbeats Map</title>
         <meta name="layout" content="main" />
-		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>\
+			<script src="${resource(dir:'js',file:'jquery-1.10.2.js')}"></script>
 			<script>
 // This example creates a 2-pixel-wide red polyline showing
 // the path of William Kingsford Smith's first trans-Pacific flight between
@@ -18,42 +19,49 @@ function initialize() {
   map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
 
-  var userCoor = [[37.772323, -122.214897, "april"],
+  var userCoor = [
+				[37.772323, -122.214897, "april"],
                 [21.291982, -157.821856, "may"],
                 [-18.142599, 178.431, "june"],
-                [-27.46758, 153.027892, "july"]];
+                [-27.46758, 153.027892, "july"]
+];
 
-  var infowindow = new google.maps.InfoWindow();
 
-  var marker, i;
-  
-  var myarr =[];
+var user_id = 1;
 
-  for (i = 0; i < userCoor.length; i++) {
-    marker = new google.maps.Marker({
-      position: new google.maps.LatLng(userCoor[i][0],userCoor[i][1]),
-      map: map
-    });
+jQuery.ajax({	
+	url: '/heartbeat/api/pulseStart',
+	data : {
+		'uid' : user_id
+	},
+	success : function(resp) {
+		var data = [
+			{
+			  "date": "May 10, 2014",     
+			  "lat": 37.772323,
+			  "lng": -122.214897
+			},
+			{
+			  "date": "May 10, 2014",     
+			  "lat": 21.291982,
+			  "lng": -157.821856
+			},
+			{
+			  "date": "May 10, 2014",     
+			  "lat": -18.142599,
+			  "lng": 178.431
+			},
+			{
+			  "date": "May 10, 2014",     
+			  "lat": -27.46758,
+			  "lng": 153.027892
+			}
+		  ];
 
-      myarr.push(new google.maps.LatLng(userCoor[i][0],userCoor[i][1]));
+		drawMap(data) ;
+	}
+});
 
-    google.maps.event.addListener(marker, 'click', (function(marker, i) {
-      return function() {
-        infowindow.setContent(userCoor[i][2]);
-        infowindow.open(map, marker);
-      }
-    })(marker, i));
-  }
-
-  var flightPath = new google.maps.Polyline({
-    path: myarr,
-    geodesic: true,
-    strokeColor: '#FF0000',
-    strokeOpacity: 1.0,
-    strokeWeight: 2
-  });
-
-  flightPath.setMap(map);
 
 
   // Try HTML5 geolocation
@@ -77,6 +85,43 @@ function initialize() {
     handleNoGeolocation(false);
   }
 }
+
+function drawMap(data) 
+{
+	
+  var infowindow = new google.maps.InfoWindow();
+
+  var marker, i;
+  
+  var myarr =[];
+
+	jQuery.each(data, function(key, item) {
+		marker = new google.maps.Marker({
+		  position: new google.maps.LatLng(item.lat, item.lng),
+		  map: map
+		});
+		
+		myarr.push(new google.maps.LatLng(item.lat, item.lng));
+
+		google.maps.event.addListener(marker, 'click', (function(marker, i) {
+		  return function() {
+		    infowindow.setContent(item.date);
+		    infowindow.open(map, marker);
+		  }
+		}));
+	});
+
+  var flightPath = new google.maps.Polyline({
+    path: myarr,
+    geodesic: true,
+    strokeColor: '#FF0000',
+    strokeOpacity: 1.0,
+    strokeWeight: 2
+  });
+
+  flightPath.setMap(map);
+}
+
 
 function handleNoGeolocation(errorFlag) {
   if (errorFlag) {
