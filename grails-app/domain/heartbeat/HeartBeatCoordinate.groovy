@@ -7,7 +7,7 @@ class HeartBeatCoordinate {
     float lat
     float lng
     
-    static belongsTo = [heartBeat: HeartBeat]
+    HeartBeat heartBeat
 
     static constraints = {
     }

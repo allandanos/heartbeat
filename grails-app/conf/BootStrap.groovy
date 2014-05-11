@@ -34,7 +34,7 @@ class BootStrap {
         dataSource.properties.each { log.info it }
         log.info "---------------------------------"
         
-        //initUserRoles()
+        initUserRoles()
         
     }
     

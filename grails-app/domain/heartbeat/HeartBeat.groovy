@@ -5,9 +5,12 @@ class HeartBeat {
     Date start
     Date end
     
-    static belongsTo = [user: User]
+    User user
+
     static hasMany = [coordinates: HeartBeatCoordinate]
 
     static constraints = {
+        end nullable: true
+        user nullable: true
     }
 }
