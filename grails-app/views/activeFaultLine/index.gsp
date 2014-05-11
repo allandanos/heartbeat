@@ -33,5 +33,6 @@
             <span class="menuButton"><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></span>
         </div>
 	    <div id="map-canvas"></div>
+      <div>Disclaimer: This is not official data from OpenData. Reference - http://images.gmanews.tv/2012/activefaults-all_polyline.kmz</div>
     </body>
 </html>

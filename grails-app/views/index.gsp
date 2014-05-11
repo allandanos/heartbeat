@@ -179,7 +179,7 @@ padding-top: 38px;">
 	
 </section>
 <!-- /.section-post -->
-<section id="download" data-bg='assets/images/lumia.jpg' class='post-2208 section type-section status-publish hentry post clearfix section-post section-category-24 section-category-home default default fullcover'>
+<section id="download" data-bg='http://articles.software.informer.com/articles_uploads/e00e78ce8bc1675c86de94b105343a53-665x411.png' class='post-2208 section type-section status-publish hentry post clearfix section-post section-category-24 section-category-home default default fullcover'>
 	
 	<div class="section-inner clearfix">
 			
