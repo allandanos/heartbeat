@@ -78,7 +78,27 @@ class ApiController {
     
     def heartbeats = {
         
-        
+        try {
+            
+            def res = []
+            def db = new Sql(dataSource)
+            def row = db.rows("select id from heart_beat where end is null")
+
+            def session = row ? HeartBeat.findById(row[0].id) : null;
+
+            if (session) {
+                session.coordinates.each {
+                    println it
+                }
+            }
+            
+            render res as JSON
+            
+        } catch (Exception e) {
+            e.printStackTrace()
+            def res = [result: "error"] 
+            render res as JSON
+        }
         
     }
     
@@ -100,7 +120,7 @@ class ApiController {
                         user: user,
                         start: new Date(),
                         end: null
-                    )
+                    ).save(flush: true)
                 }
 
                 def coordinate = new HeartBeatCoordinate(
