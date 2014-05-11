@@ -9,6 +9,10 @@ class HeartBeatCoordinate {
     
     HeartBeat heartBeat
 
+    static mapping = {
+        sort "email"
+    }
+    
     static constraints = {
     }
     

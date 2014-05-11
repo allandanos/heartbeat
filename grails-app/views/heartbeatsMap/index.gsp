@@ -22,14 +22,15 @@ function initialize() {
 var user_id = 1;
 
 jQuery.ajax({	
-	url: "${createLink(uri: '/api/heartBeats')}",
-	data : {
-		'uid' : user_id
-	},
-	success : function(resp) {
-		drawMap(data) ;
-	}
+  url: '${resource(dir:'api',file:'heartbeats')}',
+    data : {
+    'uid' : user_id
+  },
+  success : function(resp) {
+    drawMap(resp) ;
+  }
 });
+
 
 
 

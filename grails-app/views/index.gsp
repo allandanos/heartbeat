@@ -237,7 +237,6 @@ padding-top: 38px;">
 					</div>
 				</div>
 			</div>
-			</div>
 			<div class='shortcode col3-1 last'>
 				<img src="assets/images/NokiaLumia.png" width="200">
 			</div>

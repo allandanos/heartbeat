@@ -100,7 +100,9 @@ class ApiController {
                     coords.add (info)
                 }
                 
-                res.add(coords)
+                if (coords.size() > 0) {
+                    res.add(coords)
+                }
             }
             
             render res as JSON
