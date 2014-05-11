@@ -2,7 +2,7 @@
 <html>
     <head>
         <title><g:layoutTitle default="Grails" /></title>
-        <link rel="stylesheet" href="${resource(dir:'css',file:'main.css')}" />
+        
         <link rel="shortcut icon" href="${resource(dir:'images',file:'favicon.ico')}" type="image/x-icon" />
 
 		<!-- Core CSS - Include with every page -->
@@ -16,6 +16,8 @@
 		<link href="${resource(dir:'css',file:'sb-admin.css')}" rel="stylesheet">
 		<link href="${resource(dir:'css',file:'style.css')}" rel="stylesheet">
 
+        <link rel="stylesheet" href="${resource(dir:'css',file:'main.css')}" />
+        
         <g:layoutHead />
         <g:javascript library="application" />
     </head>

@@ -11,7 +11,7 @@ class SyncDailyWeatherForecastJob {
     def syncService
     
     def execute() {
-//        println "SyncDailyWeatherForecastJob"
-//        syncService.syncDailyWeatherForecast()
+        println "SyncDailyWeatherForecastJob"
+        syncService.syncDailyWeatherForecast()
     }
 }
